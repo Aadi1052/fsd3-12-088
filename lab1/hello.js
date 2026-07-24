@@ -1,14 +1,14 @@
-
-console.log("aditya kumar gupta");
-document.write("aditya kumar gupta");
-
-function sum(a, b){
-    return a+b;
+console.log("Hello, World!");
+console.log("aditya gupta");
+function sum(a, b) {
+  return a + b;
 }
-const add =(a,b) =>{
-    return a+b;
+
+const add = (a, b) => {
+  return a + b;
 };
-const add2 = (a,b)=> a+b;
-console.log(sum(20,10));
-console.log(add(20,10));
-console.log(add2(20,10));
+const add2 = (a, b) => a + b;
+
+console.log(sum(2, 3));
+console.log(add(5, 7));
+console.log(add2(10, 15));
