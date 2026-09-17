@@ -2,7 +2,7 @@ import readline from "readline/promises";
 import { stdin, stdout } from "process";
 import { readFile, writeFile } from "fs/promises";
 
-const FILE = "lab2\product.json";
+const FILE = "product.json";
 
 const getCart = async () => {
   const data = await readFile(FILE, "utf-8");
@@ -39,17 +39,20 @@ const showCart = async () => {
   console.log("total iteam :", total);
 };
 
-const removeFromCart = async () => {
+const removeFromCart = async (cin) => {
   const data = await getCart();
+
+  const pid = Number(await cin.question("Enter product id to remove: "));
+
   const count = data.length;
   const newData = data.filter((item) => item.id !== pid);
   const newCount = newData.length;
 
   if (count == newCount) {
-    console.log("pid not found");
+    console.log(`Product with id ${pid} not found`);
   } else {
     await saveCart(newData);
-    console.log("prodcut deleted successfully ");
+    console.log(`product with id ${pid} deleted successfully`);
   }
 };
 
@@ -89,7 +92,7 @@ const main = async () => {
         break;
 
       case 3:
-        await removeFromCart();
+        await removeFromCart(cin);
         break;
 
       case 4:
