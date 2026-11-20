@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Product</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 45%;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+        }
+
+        .product-info {
+            width: 55%;
+        }
+
+        .product-info h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .description {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #16a34a;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            margin-bottom: 25px;
+        }
+
+        .features li {
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: green;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background: #111827;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            .product {
+                flex-direction: column;
+            }
+
+            .product-image,
+            .product-info {
+                width: 100%;
+            }
+
+            .product-info h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Favourite Product</h1>
+        <p>A product I really love</p>
+    </header>
+
+    <div class="container">
+
+        <section class="product">
+
+            <div class="product-image">
+                <img 
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                    alt="Smart Watch"
+                >
+            </div>
+
+            <div class="product-info">
+                <h2>Smart Watch</h2>
+
+                <p class="description">
+                    My favourite product is this stylish and modern smart watch.
+                    It helps me track my daily activities, monitor fitness,
+                    receive notifications and stay connected.
+                </p>
+
+                <div class="price">₹4,999</div>
+
+                <ul class="features">
+                    <li>Modern and stylish design</li>
+                    <li>Fitness and health tracking</li>
+                    <li>Long battery life</li>
+                    <li>Water resistant</li>
+                    <li>Bluetooth connectivity</li>
+                </ul>
+
+                <button onclick="showMessage()">
+                    ❤️ Add to Favourite
+                </button>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Favourite Product</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("❤️ Smart Watch added to your favourites!");
+        }
+    </script>
+
+</body>
+</html>
